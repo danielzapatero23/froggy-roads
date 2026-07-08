@@ -1,0 +1,59 @@
+.fondo-overlay {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
+.titulo {
+    -unity-font-definition: url("project://database/Assets/PressStart2P-Regular.ttf?fileID=12800000&guid=f619b057ef203a8429920e3ffa7b9ab7&type=3#PressStart2P-Regular");
+    font-size: 32px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    margin-bottom: 50px;
+    -unity-text-outline-width: 2px;
+    -unity-text-outline-color: rgb(0, 0, 0);
+}
+
+.titulo-derrota {
+    color: rgb(255, 90, 90);
+}
+
+.titulo-victoria {
+    color: rgb(120, 235, 140);
+}
+
+.boton-reintentar {
+    width: 260px;
+    height: 64px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/PressStart2P-Regular.ttf?fileID=12800000&guid=f619b057ef203a8429920e3ffa7b9ab7&type=3#PressStart2P-Regular");
+    -unity-text-align: middle-center;
+    border-width: 4px;
+    border-radius: 0;
+    margin: 0;
+    transition-property: scale, background-color;
+    transition-duration: 0.12s;
+}
+
+.boton-reintentar:hover {
+    scale: 1.05 1.05;
+}
+
+.boton-reintentar:active {
+    scale: 0.93 0.93;
+}
+
+.boton-reintentar {
+    background-color: rgb(41, 121, 196);
+    border-color: rgb(20, 65, 115);
+}
+
+.boton-reintentar:hover {
+    background-color: rgb(70, 150, 220);
+}
+
+.boton-reintentar:active {
+    background-color: rgb(25, 90, 150);
+}

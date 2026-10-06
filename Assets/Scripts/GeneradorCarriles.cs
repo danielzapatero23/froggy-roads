@@ -13,6 +13,9 @@ public class GeneradorCarriles : MonoBehaviour
     [Header("Meta (se aleja según los carriles generados)")]
     public Transform meta;
 
+    [Header("Contenedores de la zona decorativa tras la meta (se desplazan junto con ella)")]
+    public Transform[] contenedoresDecorado;
+
     [Header("Prefabs de spawners (ya existentes)")]
     public GameObject spawnDerechaPrefab;
     public GameObject spawnIzquierdaPrefab;
@@ -48,6 +51,8 @@ public class GeneradorCarriles : MonoBehaviour
         float xMundoMax = tilemapSuelo.CellToWorld(new Vector3Int(celdaXMax, 0, 0)).x;
 
         float yInicio = meta.position.y;
+        DesplazarZonaDecorativaFinal(yInicio);
+
         int carrilesPeligrososSeguidos = 0;
 
         for (int i = 0; i < numeroCarriles; i++)
@@ -95,8 +100,24 @@ public class GeneradorCarriles : MonoBehaviour
                 }
             }
         }
+    }
 
-        meta.position = new Vector3(meta.position.x, yInicio + numeroCarriles, meta.position.z);
+    void DesplazarZonaDecorativaFinal(float yUmbral)
+    {
+        Vector3 desplazamiento = Vector3.up * numeroCarriles;
+
+        foreach (Transform contenedor in contenedoresDecorado)
+        {
+            foreach (Transform hijo in contenedor)
+            {
+                if (hijo.position.y >= yUmbral - 0.5f)
+                {
+                    hijo.position += desplazamiento;
+                }
+            }
+        }
+
+        meta.position += desplazamiento;
     }
 
     TipoCarril ElegirTipoCarril(ref int carrilesPeligrososSeguidos)

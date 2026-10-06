@@ -213453,6 +213453,13 @@ MonoBehaviour:
   muestraAsfalto: {fileID: 1900730194}
   muestraHierba: {fileID: 379369966}
   meta: {fileID: 999000004}
+  contenedoresDecorado:
+  - {fileID: 803385146}
+  - {fileID: 1078186646}
+  - {fileID: 2085215498}
+  - {fileID: 1251684685}
+  - {fileID: 1348406241}
+  - {fileID: 1490862597}
   spawnDerechaPrefab: {fileID: 5909981120106462210, guid: e022015cb84af0f4caf5bbf242f201e8, type: 3}
   spawnIzquierdaPrefab: {fileID: 4080720623108494353, guid: d77b572a520e75f47acfaf987c808a8a, type: 3}
   spawnTrenPrefab: {fileID: 6268437291893253283, guid: a0f64577232e14a40aa124b537081ff7, type: 3}
